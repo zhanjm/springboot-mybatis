@@ -1,0 +1,24 @@
+server:
+  port: 2222
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mybatis?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: test
+    password: test
+
+mybatis:
+  mapper-locations: classpath:mapping/*Mapping.xml
+  type-aliases-package: com.lazy.mybatis.entity
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰映射
+  #config-location: classpath:mybatis/mybatis-config.xml #yml配置了驼峰之类映射，就不用可以配置config_location
+
+
+logging:
+  level:
+    com:
+      lazy:
+        mybatis:
+          mapper: debug
