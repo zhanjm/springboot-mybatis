@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script th:src="@{/js/vue.js}"></script>
+    <script th:src="@{/element/element.js}"></script>
+    <link th:href="@{/element/element.css}">
+</head>
+<body>
+
+    <div id="app">
+        {{ message }}
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td>姓名</td>
+                <td>真实姓名</td>
+                <td>密码</td>
+            </tr>
+            <tr>
+                <td th:text="${user.username}">1</td>
+                <td th:text="${user.realName}">1</td>
+                <td th:text="${user.getPassword()}">1</td>
+            </tr>
+
+        </table>
+    </div>
+    <script>
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello Vue!'
+            }
+        })
+
+    </script>
+
+
+</body>
+</html>
