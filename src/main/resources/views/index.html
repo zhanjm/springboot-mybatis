@@ -3,39 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script th:src="@{/js/vue.js}"></script>
-    <script th:src="@{/element/element.js}"></script>
-    <link th:href="@{/element/element.css}">
+
 </head>
 <body>
 
-    <div id="app">
+    <!--<div id="app">
         {{ message }}
-    </div>
-    <div>
+    </div>-->
+    <!--<div>
         <table>
-            <tr>
-                <td>姓名</td>
-                <td>真实姓名</td>
-                <td>密码</td>
-            </tr>
-            <tr>
-                <td th:text="${user.username}">1</td>
-                <td th:text="${user.realName}">1</td>
-                <td th:text="${user.getPassword()}">1</td>
-            </tr>
+        <tr>
+            <td>姓名</td>
+            <td>真实姓名</td>
+            <td>密码</td>
+        </tr>
+        <tr>
+            <td th:text="${user.username}">1</td>
+            <td th:text="${user.realName}">1</td>
+            <td th:text="${user.getPassword()}">1</td>
+        </tr>
 
-        </table>
+    </table>-->
+   <!-- <template>
+        <el-table
+                :data="tableData"
+                style="width: 100%">
+            <el-table-column
+                    prop="username"
+                    label="姓名"
+                    width="180">
+            </el-table-column>
+            <el-table-column
+                    prop="realName"
+                    label="真实姓名"
+                    width="180">
+            </el-table-column>
+            <el-table-column
+                    prop="password"
+                    label="密码">
+            </el-table-column>
+        </el-table>
+    </template>
+
+    </div>-->
+    <div id="app2">
+    <template>
+
+        <el-table
+                :data="tableData"
+                stripe
+                style="width: 100%">
+            <el-table-column
+                    prop="username"
+                    label="姓名"
+                    width="180">
+            </el-table-column>
+            <el-table-column
+                    prop="realName"
+                    label="真实姓名"
+                    width="180">
+            </el-table-column>
+            <el-table-column
+                    prop="password"
+                    label="密码">
+            </el-table-column>
+        </el-table>
+
+    </template>
     </div>
+    <script th:src="@{/js/jquery-3.3.1.min.js}"></script>
+    <script th:src="@{/js/vue.js}"></script>
+    <script th:src="@{/element/element.js}"></script>
+    <link th:href="@{/element/element.css}">
+    <script th:src="@{/js/index.js}" ></script>
     <script>
-        var app = new Vue({
-            el: '#app',
+
+        /*var vm = new Vue({
+            el:"#app2",
             data: {
-                message: 'Hello Vue!'
+                tableData: user
             }
-        })
+        })*/
+
 
     </script>
+
+
 
 
 </body>
