@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lazy.mybatis.mapper.amap.PoiMapper">
+    <insert id="insert" >
+        replace into amap_poi(id,name,type,typecode,pcode,pname,citycode,cityname,adcode,adname) values
+        <foreach collection="list" item="poi" separator=",">
+            (#{poi.id},#{poi.name},#{poi.type},#{poi.typecode},#{poi.pcode},#{poi.pname},#{poi.citycode},#{poi.cityname},#{poi.adcode},#{poi.adname})
+        </foreach>
+    </insert>
+</mapper>

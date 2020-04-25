@@ -4,9 +4,16 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://112.74.185.43:3336/mybatis?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    url: jdbc:mysql://localhost:3306/mybatis?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8&serverTimezone=UTC
     username: test
     password: test123..
+
+  thymeleaf:
+    prefix: classpath:/views/
+    suffix: .html
+    mode: HTML
+    encoding: UTF-8
+    cache: false
 
   thymeleaf:
     prefix: classpath:/views/
@@ -28,4 +35,4 @@ logging:
     com:
       lazy:
         mybatis:
-          mapper: debug
+          mapper: error

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- mapper 命名空间用全类名 ；-->
-<mapper namespace="com.lazy.mybatis.mapper.UserMapper">
+<mapper namespace="com.lazy.mybatis.mapper.amap.PoiMapper">
     <!--定义公共sql，可以重复引用，引用用includ元素，通过refid属性绑定sql的id-->
     <sql id="base_column_list">
         id,username,password,realname

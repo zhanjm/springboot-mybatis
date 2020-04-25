@@ -34,14 +34,23 @@ public class UserController {
     }
     @RequestMapping("index")
     public String  index(Model model){
+        //User user = new User();
+        //user.setUsername("test");
+        //user.setRealName("test");
+        //user.setPassword("test");
+
+        model.addAttribute("user",userService.findAll());
+        return "index";
+    }
+
+    @RequestMapping("user")
+    public List<User> getUser(){
         User user = new User();
         user.setUsername("test");
         user.setRealName("test");
         user.setPassword("test");
-        model.addAttribute("user",user);
-       // ModelAndView modelAndView = new ModelAndView();
-        //modelAndView.
-        return "index";
+        return  userService.findUsers(user);
+
     }
 
 }
