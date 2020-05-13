@@ -3,7 +3,7 @@ package com.lazy.mybatis.util;
 public class AmapContant {
 
 
-    public static final String KEY = "ad559e494cc08038a48ae";
+    public static final String KEY = "ad5596ff1e8e494cc08038a48ae";
     public static final String OUTPUT_TYPE = "XML";
 
     public static final String AMAP_URL = "http://restapi.amap.com/v3";

@@ -2,6 +2,7 @@ package com.lazy.mybatis.entity;
 
 import lombok.Data;
 
+
 @Data
 public class User {
 

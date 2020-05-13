@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lazy.mybatis.mapper.AdministrativeDivisionMapper">
+    <insert id="insert" >
+        replace into AdministrativeDivision(id,name,pid,level,url, createtime,updatetime) values
+        <foreach collection="list" item="bean" separator=",">
+            (#{bean.id},#{bean.name},#{bean.pid},#{bean.level},#{bean.url},now(),now())
+        </foreach>
+    </insert>
+</mapper>
